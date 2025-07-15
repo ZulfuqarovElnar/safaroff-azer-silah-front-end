@@ -16,3 +16,15 @@ tailwind.config = {
     }
   }
 }
+
+const menu = document.getElementById("mobile-menu");
+
+  function openMenu() {
+    menu.classList.remove("translate-x-full");
+    menu.classList.add("translate-x-0");
+  }
+
+  function closeMenu() {
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("translate-x-full");
+  }
