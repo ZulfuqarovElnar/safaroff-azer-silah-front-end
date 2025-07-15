@@ -37,7 +37,7 @@
                 <img class="w-[13.889vw]" src="/assets/images/logo.svg" alt="AZERSILAH">
             </div>
 
-            <div>
+            <div class="hidden md:block">
                 <ul class="font-helvatica font-medium text-[0.833vw] text-white flex flex-col gap-2 tracking-[-0.03em]">
                     <li><a class="" href="">About</a></li>
                     <li><a href="">PRODUCTS</a></li>
@@ -47,12 +47,16 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="hidden md:block">
                 <ul class="font-helvatica font-medium text-[0.833vw] text-white flex flex-col gap-2 tracking-[-0.03em]">
                     <li><a href="">[ AZ ]</a></li>
                     <li><a class="opacity-50" href="">EN</a></li>
                     <li><a class="opacity-50" href="">RU</a></li>
                 </ul>
+            </div>
+
+            <div>
+                <img src="/assets/images/menu-icon.svg" alt="menu-icon">
             </div>
         </div>
       </header>
@@ -164,6 +168,7 @@
         </div>
     </section>
 
+    <!-- Products -->
     <section class="grid grid-cols-3 px-6 pt-[120px] pb-12">
         <div class="col-span-1">
             <span class="font-helvatica font-medium text-[0.833vw] text-[#081423] opacity-50 tracking-[-0.04em]">
@@ -224,6 +229,7 @@
 
     </section>
 
+    <!-- Our Edge -->
     <section class="pb-[120px]">
         <div class="flex flex-col justify-center items-center gap-6 ">
             <span class="font-helvatica font-medium text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]">[  OUR EDGE  ]</span>
@@ -232,6 +238,7 @@
         </div>
     </section>
 
+    <!-- Careers -->
     <section class="grid grid-cols-3 px-6 pt-[120px] pb-12 bg-[#081423]">
         <div class="col-span-1">
             <span class="font-helvatica font-medium text-[0.833vw] text-[#ffffff] opacity-50 tracking-[-0.04em]">
@@ -257,6 +264,7 @@
         </div>
     </section>
 
+    <!-- Video -->
     <section class="grid grid-cols-3 px-6 pt-[120px] pb-11">
         <div class="col-span-1">
             <span class="font-helvatica font-medium text-[0.833vw] text-[#081423] opacity-50 tracking-[-0.04em]">
@@ -311,13 +319,133 @@
         </div>
     </section>
 
-    <section></section>
+    <!-- Bootcamp -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0 bg-[#10121BB2] z-10"></div>
+        <div class="absolute inset-0">
+            <img src="/assets/images/bootcamp.png" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 z-10 flex flex-col justify-center items-center text-center gap-6 px-4">
+            <div class="w-[43.143vw] h-[43.143vw] flex flex-col justify-between">
+                <div class="flex justify-between w-full">
+                    <img src="/assets/images/bootcamp-icon.svg" alt="">
+                    <img class="rotate-90" src="/assets/images/bootcamp-icon.svg" alt="">
+                </div>
+                <div class="flex flex-col gap-6">
+                    <span class="font-helvatica font-medium text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]">[  BOOTCAMP  ]</span>
+                    <h1 class="font-helvatica font-medium text-[4vw] text-[#ffffff] leading-none uppercase tracking-[-0.04em]">Where Visionaries <br> Are Made</h1>
+                    <p class="text-[#E5E3E3] text-base md:text-[1.429vw]">Refine your skills and become the innovator <br> the defense sector needs</p>
+                </div>
+                <div class="flex justify-between w-full">
+                    <img class="-rotate-90" src="/assets/images/bootcamp-icon.svg" alt="">
+                    <img class="rotate-180" src="/assets/images/bootcamp-icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPLY -->
+    <section class="grid grid-cols-3 px-6 pt-[120px] pb-12 bg-[#081423]">
+        <div class="col-span-1">
+            <span class="font-helvatica font-medium text-[1.143vw] text-[#FFFFFF] opacity-50 tracking-[-0.04em]">
+                [  SUPPLY  ]
+            </span>
+        </div>
+        <div class="col-span-2 w-3/4">
+            <h1 class="font-helvatica font-medium text-[#FFFFFF] text-[3.5em] leading-none pb-6 tracking-[-0.04em]">Precision Partners <br> Powerful Results</h1>
+            <p class="font-helvatica text-[1.429vw] tracking-[-0.02em] text-[#FFFFFF]">We partner with suppliers who share our unwavering commitment to innovation, quality,  and performance</p>
+        </div>
+    </section>
+
+    <section class="bg-[#081423] pb-[120px]">
+        <div class="grid grid-cols-3 border-y border-[#FFFFFF40]">
+            <div class="col-span-1 h-[33.286vw] flex flex-col justify-between p-6 border-r border-[#FFFFFF40]">
+                <div class="">
+                    <img class="w-10 h-10" src="/assets/images/supply-icon-one.svg" alt="">
+                    <h1 class="pt-4 font-helvatica font-medium text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">innovation</h1>
+                </div>
+                <p class="font-helvatica text-[#ffffff] tracking-[-0.03em] text-[1.429vw] opacity-70">Partnering for groundbreaking advancements that lead to the next-generation defense technology</p>
+            </div>
+            <div class="col-span-1 h-[33.286vw] flex flex-col justify-between p-6 border-r border-[#FFFFFF40]">
+                <div class="">
+                    <img class="w-10 h-10" src="/assets/images/supply-icon-one.svg" alt="">
+                    <h1 class="pt-4 font-helvatica font-medium text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">precision</h1>
+                </div>
+                <p class="font-helvatica text-[#ffffff] tracking-[-0.03em] text-[1.429vw] opacity-70">Working with suppliers who uphold the highest standards of precision in every component</p>
+            </div>
+            <div class="col-span-1 h-[33.286vw] flex flex-col justify-between p-6">
+                <div class="">
+                    <img class="w-10 h-10" src="/assets/images/supply-icon-one.svg" alt="">
+                    <h1 class="pt-4 font-helvatica font-medium text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">QUALITY</h1>
+                </div>
+                <p class="font-helvatica text-[#ffffff] tracking-[-0.03em] text-[1.429vw] opacity-70">Delivering products that are engineered for performance, durability, and mission success</p>
+            </div>
+        </div>
+    </section>
 
     </main>
 
 
     <!-- Footer -->
-      <footer></footer>
+      <footer class="bg-[#030E1C] md:px-6 font-helvatica text-[#ffffff]">
+        <div class="grid grid-cols-1 md:grid-cols-2 py-[72px]">
+            
+            <!-- Logo and description -->
+            <div class="flex flex-col justify-between">
+                <img class="w-[15.786vw]" src="/assets/images/logo.svg" alt="">
+                <p class="text-[1vw] opacity-50 uppercase tracking-[-0.02em] leading-[130%]">
+                    ALL CRAFTED AND BUILT IN AZERBAIJAN.<br />
+                    SO TOMORROW CAN MOVE FORWARD, SAFELY.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-[9.714vw]">
+            <!-- Company -->
+            <div>
+            <h3 class="font-medium opacity-50 mb-6 text-[1.143vw] tracking-[-0.03em]">COMPANY</h3>
+            <ul class="space-y-4 text-[1.143vw]">
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">CONTACTS</a></li>
+            </ul>
+            </div>
+
+            <!-- Terms & Policies -->
+            <div>
+            <h3 class="font-medium opacity-50 mb-6 text-[1.143vw] tracking-[-0.03em] whitespace-nowrap">TERMS & POLICIES</h3>
+            <ul class="space-y-4 text-[1.143vw]">
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">TERMS OF USE</a></li>
+            </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+            <h3 class="font-medium opacity-50 mb-6 text-[1.143vw] tracking-[-0.03em]">SOCIAL MEDIA</h3>
+            <ul class="space-y-4 text-[1.143vw]">
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">INSTAGRAM</a></li>
+                <li><a href="#">YOUTUBE</a></li>
+            </ul>
+            </div></div>
+            
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#FFFFFF26]"></div>
+
+        <!-- Bottom row -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-[1vw] pt-9 pb-[38px]">
+            <p class="font-medium opacity-50 tracking-[-0.03em]">© AZERSILAH 2025. ALL RIGHTS RESERVED</p>
+            <p class="font-medium tracking-[-0.03em]">
+                <span class="opacity-50">WEBSITE CREATED BY </span>
+                <span class="font-medium">SAFAROFF AGENCY</span>
+            </p>
+        </div>
+      </footer>
+
 
     <!-- JavaScript -->
 
