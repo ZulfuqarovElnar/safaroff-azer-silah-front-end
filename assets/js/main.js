@@ -28,3 +28,80 @@ const menu = document.getElementById("mobile-menu");
     menu.classList.remove("translate-x-0");
     menu.classList.add("translate-x-full");
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.mySwiper', {
+      direction: 'vertical',
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+      slidesPerView: 1,
+      allowTouchMove: false,
+    });
+
+    let active = document.querySelector('.swiper-slide-active');
+    if (active) active.classList.add('bounce-slide');
+
+    swiper.on('slideChangeTransitionStart', () => {
+      document.querySelectorAll('.bounce-slide').forEach(el => {
+        el.classList.remove('bounce-slide');
+      });
+      const curr = document.querySelector('.swiper-slide-active');
+      if (curr) curr.classList.add('bounce-slide');
+    });
+  });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counts = document.querySelectorAll('.count');
+    let animated = false;
+
+    function animateCounts() {
+      counts.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        let current = 0;
+        const duration = 2000;
+        const stepTime = Math.floor(duration / target);
+
+        const timer = setInterval(() => {
+          current++;
+          el.textContent = current + '+';
+
+          if (current >= target) {
+            clearInterval(timer);
+          }
+        }, stepTime);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          animateCounts();
+          animated = true;
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const statisticsSection = document.getElementById('statistics');
+    if (statisticsSection) {
+      observer.observe(statisticsSection);
+    }
+  });
+  const header = document.getElementById('main-header');
+  const threshold = window.innerHeight;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= threshold) {
+
+      header.style.opacity = '0';
+      header.style.pointerEvents = 'none';
+    } else {
+      header.style.opacity = '1';
+      header.style.pointerEvents = 'auto';
+    }
+  });

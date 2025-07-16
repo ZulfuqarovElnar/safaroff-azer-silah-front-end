@@ -3,3 +3,29 @@
     margin: 0;
     padding: 0;
 }
+
+.mix-blend-difference {
+    mix-blend-mode: difference;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.8s steps(2, jump-none) infinite;
+  -webkit-animation: blink 0.8s steps(2, jump-none) infinite;
+}
+
+@keyframes bounceSlide {
+  0%   { transform: translateY(100%); }
+  60%  { transform: translateY(-20%); -webkit-transform: translateY(-20%); -moz-transform: translateY(-20%); -ms-transform: translateY(-20%); -o-transform: translateY(-20%); }
+  80%  { transform: translateY(5%); }
+  100% { transform: translateY(0); }
+}
+
+.bounce-slide {
+  animation: bounceSlide 0.7s ease-out both;
+  -webkit-animation: bounceSlide 0.7s ease-out both;
+}

@@ -27,540 +27,1113 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/font.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
-  <body class="">
+  <body>
     <!-- Header -->
-      <header class="w-full absolute z-50">
-        <div class="flex justify-between items-center md:items-start h-[14.93vw] md:h-auto px-3 md:p-[1.71vw]">
-            <div>
-                <img class="w-[33.07vw] md:w-[13.889vw]" src="/assets/images/logo.svg" alt="AZERSILAH">
-            </div>
-
-            <div class="hidden md:block">
-                <ul class=" font-helvetica font-medium text-[0.857vw] md:text-[1.14vw] text-white flex flex-col gap-2 tracking-[-0.03em]">
-                    <li class="group overflow-hidden h-[1.5vw]">
-                        <a href="#" class="flex items-center gap-[0.57vw] relative h-full">
-                            <!-- Soldakı ikon -->
-                            <img
-                            class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            src="/assets/images/header-icon.svg"
-                            alt=""
-                            />
-                            <!-- Yazı wrapper -->
-                            
-                            <div class="relative h-full top-1 flex-shrink-0 min-w-max">
-                                <span class="invisible block">About</span>
-                            <span
-                                class="block absolute visible top-0 left-0 transition-transform duration-300 group-hover:-translate-y-full"
-                            >
-                                About
-                            </span>
-                            <span
-                                class="block absolute visible top-full left-0 transition-transform duration-300 group-hover:translate-y-[-100%]"
-                            >
-                                About
-                            </span>
-                            </div>
-
-                            <!-- Sağdakı ikon -->
-                            <img
-                            class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            src="/assets/images/header-icon.svg"
-                            alt=""
-                            />
-                        </a>
-                    </li>
-
-                    <li class="group">
-                    <a href="#" class="transition-colors duration-200 group-hover:animate-bounce">
-                        PRODUCTS
-                    </a>
-                    </li>
-                    <li class="group">
-                    <a href="#" class="transition-colors duration-200 group-hover:animate-bounce">
-                        NEWS
-                    </a>
-                    </li>
-                    <li class="group">
-                    <a href="#" class="transition-colors duration-200 group-hover:animate-bounce">
-                        CAREERS
-                    </a>
-                    </li>
-                    <li class="group">
-                    <a href="#" class="transition-colors duration-200 group-hover:animate-bounce">
-                        CONTACTS
-                    </a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="hidden md:block">
-                <ul class="font-helvetica font-medium text-[0.857vw] md:text-[1.143vw] text-white flex flex-col gap-2 tracking-[-0.03em]">
-                    <li><a href="">[ AZ ]</a></li>
-                    <li><a class="opacity-50" href="">EN</a></li>
-                    <li><a class="opacity-50" href="">RU</a></li>
-                </ul>
-            </div>
-
-            <div class="block md:hidden">
-                <button onclick="openMenu()">
-                    <img src="/assets/images/menu-icon.svg" alt="menu-icon">
-                </button>
-            </div>
-        </div>
-      </header>
-    <!-- Mobile-Menu -->
-    <nav id="mobile-menu"
-     class="fixed top-0 right-0 w-full h-full bg-[#0F2A5F] z-50 text-white flex flex-col justify-between md:hidden transform translate-x-full transition-transform duration-500 ease-in-out">
-        <div>
-            <div class="flex justify-between items-center h-[14.93vw] px-3">
-                <img class="w-[33.07vw]" src="/assets/images/logo.svg" alt="AZERSILAH">
-                <button  onclick="closeMenu()">
-                <img class="w-6 h-6" src="/assets/images/close-icon.svg" alt="">
-                </button>
-            </div>
-
-            <ul class="space-y-9 text-[12.8vw] font-helvetica font-medium pt-9 px-3 tracking-[-0.05em]">
-                <li><a class="flex justify-between items-center text-white h-[12.8vw]" href="#">
-                        <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                        <span class="leading-none pt-2">ABOUT US</span>
-                    </a>
-                </li>
-                <li><a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
-                        <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                        <span class="leading-none pt-2">PRODUCTS</span>
-                    </a>
-                </li>
-                <li><a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
-                        <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                        <span class="leading-none pt-2">NEWS</span>
-                    </a>
-                </li>
-                <li><a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
-                        <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                        <span class="leading-none pt-2">CAREERS</span>
-                    </a>
-                </li>
-                <li><a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
-                        <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                        <span class="leading-none pt-2">CONTACTS</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="flex justify-between gap-3 text-[8.53vw] font-medium mx-3 mb-5 h-[12.8vw]">
-            <a class="text-white flex justify-between text-center w-[29.07vw]" href="#">
-                <img class="w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                AZ 
-                <img class="w-2 h-[12.8vw] rotate-180" src="/assets/images/menu-icon-one.svg" alt="">
-            </a>
-            <a class="text-white/50 flex justify-between text-center w-[29.07vw]" href="#">
-                <img class="invisible h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                EN 
-                <img class="invisible w-2 h-[12.8vw] rotate-180" src="/assets/images/menu-icon-one.svg" alt="">
-            </a>
-            <a class="text-white/50 flex justify-between text-center w-[29.07vw]" href="#">
-                <img class="invisible w-2 h-[12.8vw]" src="/assets/images/menu-icon-one.svg" alt="">
-                RU 
-                <img class="invisible w-2 h-[12.8vw] rotate-180" src="/assets/images/menu-icon-one.svg" alt="">
-            </a>
-        </div>
-    </nav>
-
-
-    <!-- Main -->
-  <main>
-    <!-- Hero -->
-    <section class="relative w-full h-screen overflow-hidden text-white font-sans">
+    <header id="main-header" class="sticky inset-0 z-0 w-full isolate h-screen">
+      <div
+        class="absolute inset-0 z-0 w-full overflow-hidden text-white font-sans isolate"
+      >
         <!-- Background Video -->
         <video
-            src="/assets/video/hero-video.mp4"
-            muted
-            loop
-            playsinline
-            class="absolute inset-0 w-full h-full object-cover"
+          src="/assets/video/hero-video.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover z-0"
         ></video>
 
         <!-- Overlay -->
         <!--<div class="absolute inset-0 bg-black/40"></div>-->
 
-        <div class="absolute top-0 left-0 right-0 bottom-0 m-auto flex justify-center items-center z-40">
-        <img class="w-8 h-8 md:w-10 md:h-10" src="/assets/images/plus-icon.svg" alt="">
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0 m-auto flex justify-center items-center z-40"
+        >
+          <img
+            class="w-8 h-8 md:w-10 md:h-10"
+            src="/assets/images/plus-icon.svg"
+            alt=""
+          />
         </div>
 
         <!-- Overlayed Content -->
-        <div class="relative z-10 w-full h-full grid grid-cols-2 grid-rows-2 border border-white/10">
-            <!-- Top Left -->
-            <div class="p-3 md:p-6 flex items-end justify-start border-b border-white/10">
-            <p class="text-[3.2vw] md:text-[1.042vw] font-helvetica font-medium leading-tight tracking-[-0.05em]">
-                ALL CRAFTED AND BUILT IN AZERBAIJAN.<br />
-                SO TOMORROW CAN MOVE FORWARD, SAFELY.
+        <div
+          class="relative w-full h-full grid grid-cols-2 grid-rows-2 border border-white/10"
+        >
+          <!-- Top Left -->
+          <div
+            class="p-3 md:p-6 flex items-end justify-start border-b border-white/10"
+          >
+            <p
+              class="text-[3.2vw] md:text-[1.042vw] font-helvetica font-medium leading-tight tracking-[-0.05em] flex gap-[0.21vw]"
+            >
+              <span class="animate-blink text-white mix-blend-difference"
+                >/</span
+              >ALL CRAFTED AND BUILT IN AZERBAIJAN.<br />
+              SO TOMORROW CAN MOVE FORWARD, SAFELY.
             </p>
-            </div>
+          </div>
 
-            <!-- Top Right -->
-            <div class="p-3 md:p-6 flex flex-col items-end justify-start gap-2 text-xs md:text-sm border-b border-l border-white/10 text-right">
-            </div>
+          <!-- Top Right -->
+          <div
+            class="p-3 md:p-6 flex flex-col items-end justify-start gap-2 text-xs md:text-sm border-b border-l border-white/10 text-right"
+          ></div>
 
-            <!-- Bottom Left -->
-            <div class="p-3 md:p-6 flex items-end justify-start">
-            <h1 class="text-[13.867vw] md:text-[5.833vw] font-helvetica font-medium leading-none tracking-[-0.05em]">
-                ENGINEERED <br>
-                TO <span>PROTECT</span>
+          <!-- Bottom Left -->
+          <div class="p-3 md:p-6 flex items-end justify-start">
+            <h1
+              class="text-[13.867vw] md:text-[5.833vw] font-helvetica font-medium leading-none tracking-[-0.05em]"
+            >
+              <span class="leading-none h-[5vw]">ENGINEERED</span>
+              <div class="flex items-center gap-[5.33vw] md:gap-[1.43vw]">
+                <span class="pl-2">TO</span>
+                <span class="inline-block w-[8ch]">
+                  <div
+                    class="swiper mix-blend-difference mySwiper h-[13.867vw] md:h-[5.833vw] overflow-hidden"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">PROTECT</div>
+                      <div class="swiper-slide">SECURE</div>
+                      <div class="swiper-slide">DEFEND</div>
+                      <div class="swiper-slide">GUARD</div>
+                      <div class="swiper-slide">SHIELD</div>
+                    </div>
+                  </div>
+                </span>
+              </div>
             </h1>
-            </div>
+          </div>
 
-            <!-- Bottom Right -->
-            <div class="p-3 md:p-6 flex md:items-end justify-end font-helvetica font-medium text-[3.733vw] md:text-[1.458vw] border-l border-white/10 text-right">
+          <!-- Bottom Right -->
+          <div
+            class="p-3 md:p-6 flex md:items-end justify-end font-helvetica font-medium text-[3.733vw] md:text-[1.458vw] border-l border-white/10 text-right"
+          >
             <div class="md:w-[40%] leading-[1.2] tracking-[-0.05em]">
-                PRECISION INNOVATION. <br>
-                SEAMLESS DESIGN.
+              PRECISION INNOVATION. <br />
+              SEAMLESS DESIGN.
             </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div
+        class="absolute w-full flex justify-between items-center md:items-start h-[14.93vw] md:h-auto px-3 md:p-[1.71vw]"
+      >
+        <div>
+          <img
+            class="w-[33.07vw] md:w-[13.889vw]"
+            src="/assets/images/logo.svg"
+            alt="AZERSILAH"
+          />
+        </div>
 
-    <!-- Who We Are? -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-5 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-8 md:pb-12">
+        <div class="hidden md:block">
+          <ul
+            class="font-helvetica font-medium text-[0.857vw] md:text-[1.14vw] text-white flex flex-col gap-2 tracking-[-0.03em]"
+          >
+            <li class="group overflow-hidden">
+              <a
+                href="#"
+                class="flex items-center gap-[0.57vw] relative h-full"
+              >
+                <img
+                  class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+
+                <div class="relative h-full top-[2px] flex-shrink-0 min-w-max">
+                  <span
+                    class="invisible block text-white mix-blend-difference uppercase"
+                    >About</span
+                  >
+                  <span
+                    class="block absolute visible top-0 left-0 transition-transform duration-300 text-white mix-blend-difference group-hover:-translate-y-full uppercase"
+                  >
+                    About
+                  </span>
+                  <span
+                    class="block absolute visible top-full left-0 transition-transform duration-300 text-white mix-blend-difference group-hover:translate-y-[-100%] uppercase"
+                  >
+                    About
+                  </span>
+                </div>
+
+                <img
+                  class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="group overflow-hidden">
+              <a
+                href="#"
+                class="flex items-center gap-[0.57vw] relative h-full"
+              >
+                <img
+                  class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+
+                <div class="relative h-full top-[2px] flex-shrink-0 min-w-max">
+                  <span class="invisible block">PRODUCTS</span>
+                  <span
+                    class="block absolute visible top-0 left-0 transition-transform duration-300 mix-blend-difference group-hover:-translate-y-full"
+                  >
+                    PRODUCTS
+                  </span>
+                  <span
+                    class="block absolute visible top-full left-0 transition-transform duration-300 mix-blend-difference group-hover:translate-y-[-100%]"
+                  >
+                    PRODUCTS
+                  </span>
+                </div>
+
+                <img
+                  class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="group overflow-hidden">
+              <a
+                href="#"
+                class="flex items-center gap-[0.57vw] relative h-full"
+              >
+                <img
+                  class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+
+                <div class="relative h-full top-[2px] flex-shrink-0 min-w-max">
+                  <span class="invisible block">NEWS</span>
+                  <span
+                    class="block absolute visible top-0 left-0 transition-transform duration-300 mix-blend-difference group-hover:-translate-y-full"
+                  >
+                    NEWS
+                  </span>
+                  <span
+                    class="block absolute visible top-full left-0 transition-transform duration-300 mix-blend-difference group-hover:translate-y-[-100%]"
+                  >
+                    NEWS
+                  </span>
+                </div>
+
+                <img
+                  class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="group overflow-hidden">
+              <a
+                href="#"
+                class="flex items-center gap-[0.57vw] relative h-full"
+              >
+                <img
+                  class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+
+                <div class="relative h-full top-[2px] flex-shrink-0 min-w-max">
+                  <span class="invisible block">CAREERS</span>
+                  <span
+                    class="block absolute visible top-0 left-0 transition-transform duration-300 mix-blend-difference group-hover:-translate-y-full"
+                  >
+                    CAREERS
+                  </span>
+                  <span
+                    class="block absolute visible top-full left-0 transition-transform duration-300 mix-blend-difference group-hover:translate-y-[-100%]"
+                  >
+                    CAREERS
+                  </span>
+                </div>
+
+                <img
+                  class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="group overflow-hidden">
+              <a
+                href="#"
+                class="flex items-center gap-[0.57vw] relative h-full"
+              >
+                <img
+                  class="w-[0.29vw] h-[1.14vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+
+                <div class="relative h-full top-[2px] flex-shrink-0 min-w-max">
+                  <span class="invisible block">CONTACTS</span>
+                  <span
+                    class="block absolute visible top-0 left-0 transition-transform duration-300 mix-blend-difference group-hover:-translate-y-full"
+                  >
+                    CONTACTS
+                  </span>
+                  <span
+                    class="block absolute visible top-full left-0 transition-transform duration-300 mix-blend-difference group-hover:translate-y-[-100%]"
+                  >
+                    CONTACTS
+                  </span>
+                </div>
+
+                <img
+                  class="w-[0.29vw] h-[1.14vw] rotate-180 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-difference"
+                  src="/assets/images/header-icon.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden md:block">
+          <ul
+            class="font-helvetica font-medium text-[0.857vw] md:text-[1.143vw] text-white flex flex-col gap-2 tracking-[-0.03em]"
+          >
+            <li><a class="mix-blend-difference" href="">[ AZ ]</a></li>
+            <li><a class="opacity-50" href="">EN</a></li>
+            <li><a class="opacity-50" href="">RU</a></li>
+          </ul>
+        </div>
+
+        <div class="block md:hidden">
+          <button onclick="openMenu()">
+            <img src="/assets/images/menu-icon.svg" alt="menu-icon" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile-Menu -->
+    <nav
+      id="mobile-menu"
+      class="fixed top-0 right-0 w-full h-full bg-[#0F2A5F] z-50 text-white flex flex-col justify-between md:hidden transform translate-x-full transition-transform duration-500 ease-in-out"
+    >
+      <div>
+        <div class="flex justify-between items-center h-[14.93vw] px-3">
+          <img
+            class="w-[33.07vw]"
+            src="/assets/images/logo.svg"
+            alt="AZERSILAH"
+          />
+          <button onclick="closeMenu()">
+            <img class="w-6 h-6" src="/assets/images/close-icon.svg" alt="" />
+          </button>
+        </div>
+
+        <ul
+          class="space-y-9 text-[12.8vw] font-helvetica font-medium pt-9 px-3 tracking-[-0.05em]"
+        >
+          <li>
+            <a
+              class="flex justify-between items-center text-white h-[12.8vw]"
+              href="#"
+            >
+              <img
+                class="w-2 h-[12.8vw]"
+                src="/assets/images/menu-icon-one.svg"
+                alt=""
+              />
+              <span class="leading-none pt-2">ABOUT US</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
+              <img
+                class="w-2 h-[12.8vw]"
+                src="/assets/images/menu-icon-one.svg"
+                alt=""
+              />
+              <span class="leading-none pt-2">PRODUCTS</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
+              <img
+                class="w-2 h-[12.8vw]"
+                src="/assets/images/menu-icon-one.svg"
+                alt=""
+              />
+              <span class="leading-none pt-2">NEWS</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
+              <img
+                class="w-2 h-[12.8vw]"
+                src="/assets/images/menu-icon-one.svg"
+                alt=""
+              />
+              <span class="leading-none pt-2">CAREERS</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex justify-between text-white/50 h-[12.8vw]" href="#">
+              <img
+                class="w-2 h-[12.8vw]"
+                src="/assets/images/menu-icon-one.svg"
+                alt=""
+              />
+              <span class="leading-none pt-2">CONTACTS</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="flex justify-between gap-3 text-[8.53vw] font-medium mx-3 mb-5 h-[12.8vw]"
+      >
+        <a
+          class="text-white flex justify-between text-center w-[29.07vw]"
+          href="#"
+        >
+          <img
+            class="w-2 h-[12.8vw]"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+          AZ
+          <img
+            class="w-2 h-[12.8vw] rotate-180"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+        </a>
+        <a
+          class="text-white/50 flex justify-between text-center w-[29.07vw]"
+          href="#"
+        >
+          <img
+            class="invisible h-[12.8vw]"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+          EN
+          <img
+            class="invisible w-2 h-[12.8vw] rotate-180"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+        </a>
+        <a
+          class="text-white/50 flex justify-between text-center w-[29.07vw]"
+          href="#"
+        >
+          <img
+            class="invisible w-2 h-[12.8vw]"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+          RU
+          <img
+            class="invisible w-2 h-[12.8vw] rotate-180"
+            src="/assets/images/menu-icon-one.svg"
+            alt=""
+          />
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main id="other-section" class="bg-white">
+      <!-- Who We Are? -->
+      <section
+        class="relative z-20 bg-white grid grid-cols-1 md:grid-cols-3 gap-5 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-8 md:pb-12"
+      >
         <div class="col-span-1">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]">
-                [  WHO WE ARE?  ]
-            </span>
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]"
+          >
+            [ WHO WE ARE? ]
+          </span>
         </div>
         <div class="col-span-1 md:col-span-2 w-full md:w-3/4">
-            <h1 class="font-helvetica font-medium text-[#081423] text-[8.53vw] md:text-[4vw] leading-none pb-6">BORN TO <br> PROTECT PROGRESS</h1>
-            <p class="font-helvetica text-[#4D4D4D] text-[4.27vw] md:text-[1.43vw] tracking-[-0.02em]">Azersilah merges advanced research with artisan-level craft to create defense solutions that look forward—so humanity can move forward. Every detail is purposeful, every line refined, every system built to protect what matters most</p>
+          <h1
+            class="font-helvetica font-medium text-[#081423] text-[8.53vw] md:text-[4vw] leading-none pb-6"
+          >
+            BORN TO <br />
+            PROTECT PROGRESS
+          </h1>
+          <p
+            class="font-helvetica text-[#4D4D4D] text-[4.27vw] md:text-[1.43vw] tracking-[-0.02em]"
+          >
+            Azersilah merges advanced research with artisan-level craft to
+            create defense solutions that look forward—so humanity can move
+            forward. Every detail is purposeful, every line refined, every
+            system built to protect what matters most
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- Statistika -->
-    <section class="grid grid-cols-2 md:grid-cols-4 font-helvetica px-3 md:px-[1.71vw] gap-3 md:gap-4">
-        <div class="text-[#081423] flex flex-col justify-between gap-6 md:gap-12">
-            <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
-            <div class="mx-auto">
-                <span class="text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal">30+</span>
-                <p class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]">years in defence</p>
-            </div>
-            
-            <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
+      <!-- Statistika -->
+      <section
+        id="statistics"
+        class="relative z-20 bg-white grid grid-cols-2 md:grid-cols-4 font-helvetica px-3 md:px-[1.71vw] gap-3 md:gap-4"
+      >
+        <div
+          class="stat-item text-[#081423] flex flex-col justify-between gap-6 md:gap-12"
+        >
+          <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
+          <div class="mx-auto text-center">
+            <span
+              class="count text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal"
+              data-target="30"
+              >0+</span
+            >
+            <p
+              class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]"
+            >
+              years in defence
+            </p>
+          </div>
+          <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
         </div>
 
-        <div class="text-[#081423] flex flex-col justify-between gap-6 md:gap-12">
-            <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
-            <div class="mx-auto">
-                <span class="text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal">200+</span>
-                <p class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]">products developed</p>
-            </div>
-            
-            <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
+        <div
+          class="stat-item text-[#081423] flex flex-col justify-between gap-6 md:gap-12"
+        >
+          <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
+          <div class="mx-auto text-center">
+            <span
+              class="count text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal"
+              data-target="200"
+              >0+</span
+            >
+            <p
+              class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]"
+            >
+              products developed
+            </p>
+          </div>
+          <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
         </div>
-        <div class="text-[#081423] flex flex-col justify-between gap-6 md:gap-12">
-            <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
-            <div class="mx-auto">
-                <span class="text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal">50+</span>
-                <p class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]">innovative patents</p>
-            </div>
-            
-            <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
-        </div>
-        <div class="text-[#081423] flex flex-col justify-between gap-6 md:gap-12">
-            <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
-            <div class="mx-auto">
-                <span class="text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal">150+</span>
-                <p class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]">global clients</p>
-            </div>
-            
-            <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
-        </div>
-    </section>
 
-    <!-- Products -->
-    <section class="grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-20 gap-5 md:pt-[8.57vw] pb-6 md:pb-12">
+        <div
+          class="stat-item text-[#081423] flex flex-col justify-between gap-6 md:gap-12"
+        >
+          <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
+          <div class="mx-auto text-center">
+            <span
+              class="count text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal"
+              data-target="50"
+              >0+</span
+            >
+            <p
+              class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]"
+            >
+              innovative patents
+            </p>
+          </div>
+          <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
+        </div>
+
+        <div
+          class="stat-item text-[#081423] flex flex-col justify-between gap-6 md:gap-12"
+        >
+          <div class="w-full h-6 border-t border-x border-[#E5E3E3]"></div>
+          <div class="mx-auto text-center">
+            <span
+              class="count text-[#081423] text-[12.8vw] md:text-[6.286vw] leading-none font-normal"
+              data-target="150"
+              >0+</span
+            >
+            <p
+              class="font-medium text-[#081423] text-[3.2vw] md:text-[1.429vw] uppercase tracking-[-0.04em]"
+            >
+              global clients
+            </p>
+          </div>
+          <div class="w-full h-6 border-b border-x border-[#E5E3E3]"></div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section
+        class="relative z-20 bg-white grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-20 gap-5 md:pt-[8.57vw] pb-6 md:pb-12"
+      >
         <div class="col-span-1">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]">
-                [  PRODUCTS WE MADE  ]
-            </span>
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]"
+          >
+            [ PRODUCTS WE MADE ]
+          </span>
         </div>
         <div class="col-span-1 md:col-span-2 w-full md:w-3/4">
-            <h1 class="font-helvetica font-medium text-[#081423] text-[8.533vw] md:text-[3.5em] leading-none uppercase">PoweR. Elegance. <br> Zero Compromise.</h1>
+          <h1
+            class="font-helvetica font-medium text-[#081423] text-[8.533vw] md:text-[3.5em] leading-none uppercase"
+          >
+            PoweR. Elegance. <br />
+            Zero Compromise.
+          </h1>
         </div>
-    </section>
+      </section>
 
-    <section class="flex flex-col gap-1 px-3 md:px-[1.71vw] pb-20 md:pb-[8.57vw]">
+      <section
+        class="relative z-20 bg-white flex flex-col gap-1 px-3 md:px-[1.71vw] pb-20 md:pb-[8.57vw]"
+      >
         <div class="grid grid-cols-1 md:grid-cols-5 gap-1">
-            <div class="col-span-2 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="flex justify-center my-auto ">
-                    <img class="max-h-[60.53vw] md:max-h-[26.857vw]" src="/assets/images/product-one.svg" alt="">
-                </div>
-                
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase">Ammunition <br> Accessories & Systems</h1>  
+          <div
+            class="col-span-2 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="flex justify-center my-auto">
+              <img
+                class="max-h-[60.53vw] md:max-h-[26.857vw]"
+                src="/assets/images/product-one.svg"
+                alt=""
+              />
             </div>
-            <div class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="flex justify-center my-auto">
-                    <img class="max-h-[60.53vw] md:max-h-[26.857vw]" src="/assets/images/product-two.svg" alt="">
-                </div>
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase">TACTICAL UAVS</h1>
+
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase"
+            >
+              Ammunition <br />
+              Accessories & Systems
+            </h1>
+          </div>
+          <div
+            class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="flex justify-center my-auto">
+              <img
+                class="max-h-[60.53vw] md:max-h-[26.857vw]"
+                src="/assets/images/product-two.svg"
+                alt=""
+              />
             </div>
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase"
+            >
+              TACTICAL UAVS
+            </h1>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-1">
-            <div class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="flex justify-center my-auto">
-                    <img class="max-h-[60.53vw] md:max-h-[26.857vw]" src="/assets/images/product-four.svg" alt="">
-                </div>
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase">ARMOURED <br> AND TACTICAL VEHICLIS</h1>  
+          <div
+            class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="flex justify-center my-auto">
+              <img
+                class="max-h-[60.53vw] md:max-h-[26.857vw]"
+                src="/assets/images/product-four.svg"
+                alt=""
+              />
             </div>
-            <div class="col-span-2 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="flex justify-center my-auto">
-                    <img class="max-h-[60.53vw] md:max-h-[26.857vw]" src="/assets/images/product-three.svg" alt="">
-                </div>
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase">EXPLOSIVES <br> AND AMMUNATION</h1>
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase"
+            >
+              ARMOURED <br />
+              AND TACTICAL VEHICLIS
+            </h1>
+          </div>
+          <div
+            class="col-span-2 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="flex justify-center my-auto">
+              <img
+                class="max-h-[60.53vw] md:max-h-[26.857vw]"
+                src="/assets/images/product-three.svg"
+                alt=""
+              />
             </div>
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase"
+            >
+              EXPLOSIVES <br />
+              AND AMMUNATION
+            </h1>
+          </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-5 gap-1">
-            <div class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="flex justify-center my-auto">
-                   <img class="max-h-[60.53vw] md:max-h-[26.857vw]" src="/assets/images/product-five.svg" alt=""> 
-                </div>
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase">Heavy Weaponry <br> and Mortars</h1>  
+          <div
+            class="col-span-3 bg-[#F2F0F0] pt-10 md:pt-[56px] px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="flex justify-center my-auto">
+              <img
+                class="max-h-[60.53vw] md:max-h-[26.857vw]"
+                src="/assets/images/product-five.svg"
+                alt=""
+              />
             </div>
-            <div class="col-span-2 bg-[#1B467B] pt-5 md:pt-6 px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7">
-                <div class="self-end">
-                     <img class="w-8 h-8 md:w-11 md:h-11" src="/assets/images/arrow-down.svg" alt="">
-                </div>
-               
-                <h1 class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#ffffff] leading-[100%] md:leading-[110%] uppercase">DOWNLOAD <br> our catalog</h1>
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#081423] leading-[100%] md:leading-[110%] uppercase"
+            >
+              Heavy Weaponry <br />
+              and Mortars
+            </h1>
+          </div>
+          <div
+            class="col-span-2 bg-[#1B467B] pt-5 md:pt-6 px-5 md:px-7 pb-5 md:pb-7 h-[93.6vw] md:h-[39.857vw] flex flex-col justify-between gap-7"
+          >
+            <div class="self-end">
+              <img
+                class="w-8 h-8 md:w-11 md:h-11"
+                src="/assets/images/arrow-down.svg"
+                alt=""
+              />
             </div>
+
+            <h1
+              class="font-helvetica font-medium text-[5.3vw] md:text-[2.286vw] text-[#ffffff] leading-[100%] md:leading-[110%] uppercase"
+            >
+              DOWNLOAD <br />
+              our catalog
+            </h1>
+          </div>
         </div>
+      </section>
 
-    </section>
-
-    <!-- Our Edge -->
-    <section class="pb-20 md:pb-[8.57vw]">
-        <div class="flex flex-col justify-center items-center gap-5 md:gap-6 ">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]">[  OUR EDGE  ]</span>
-            <h1 class="font-helvetica font-medium text-[8.53vw] md:text-[4vw] text-[#081423] leading-[100%] uppercase text-center">crafted to Excel. <br> Proof of <br class="block md:hidden">Superiority <br> in Every Detail</h1>
-            <img class="w-[63.73vw] h-[63.73vw] md:w-[31.429vw] md:h-[31.429vw] pt-3 md:pt-6" src="/assets/images/our-one.svg" alt="">
+      <!-- Our Edge -->
+      <section class="relative z-20 bg-white pb-20 md:pb-[8.57vw]">
+        <div class="flex flex-col justify-center items-center gap-5 md:gap-6">
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]"
+            >[ OUR EDGE ]</span
+          >
+          <h1
+            class="font-helvetica font-medium text-[8.53vw] md:text-[4vw] text-[#081423] leading-[100%] uppercase text-center"
+          >
+            crafted to Excel. <br />
+            Proof of <br class="block md:hidden" />Superiority <br />
+            in Every Detail
+          </h1>
+          <img
+            class="w-[63.73vw] h-[63.73vw] md:w-[31.429vw] md:h-[31.429vw] pt-3 md:pt-6"
+            src="/assets/images/our-one.svg"
+            alt=""
+          />
         </div>
-    </section>
+      </section>
 
-    <!-- Careers -->
-    <section class="grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-6 md:pb-12 bg-[#081423]">
+      <!-- Careers -->
+      <section
+        class="relative z-20 grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-6 md:pb-12 bg-[#081423]"
+      >
         <div class="col-span-1 pb-5 md:pb-0">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]">
-                [  CAREERS  ]
-            </span>
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]"
+          >
+            [ CAREERS ]
+          </span>
         </div>
         <div class="col-span-1 md:col-span-2 w-full md:w-3/4">
-            <h1 class="font-helvetica font-medium text-[#ffffff] text-[8.533vw] md:text-[3.5em] leading-[100%] pb-4 md:pb-6 uppercase">Become Part <br> of the Vision</h1>
-            <div class="block md:hidden col-span-1">
-               <p class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[120%]">Azersilah merges advanced research with artisan-level craft to create defense solutions that look forward—so humanity can move forward. Every detail is purposeful, every line refined, every system built to protect what matters most</p>
-            </div>
+          <h1
+            class="font-helvetica font-medium text-[#ffffff] text-[8.533vw] md:text-[3.5em] leading-[100%] pb-4 md:pb-6 uppercase"
+          >
+            Become Part <br />
+            of the Vision
+          </h1>
+          <div class="block md:hidden col-span-1">
+            <p
+              class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[120%]"
+            >
+              Azersilah merges advanced research with artisan-level craft to
+              create defense solutions that look forward—so humanity can move
+              forward. Every detail is purposeful, every line refined, every
+              system built to protect what matters most
+            </p>
+          </div>
         </div>
-    </section>
-    
-    <section class="pt-6 md:pt-5 pb-[16vw] md:pb-40 bg-[#081423] px-3 md:px-[1.71vw]">
+      </section>
+
+      <section
+        class="relative z-20 pt-6 md:pt-5 pb-[16vw] md:pb-40 bg-[#081423] px-3 md:px-[1.71vw]"
+      >
         <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
-            <div class="col-span-1 self-end">
-                <img class="w-full md:w-[31.429vw] h-[63.09vw] md:h-[31.429vw] object-cover md:object-contain" src="/assets/images/careers-one.svg" alt="">
-            </div>
-            <div class="col-span-1">
-                <img class="w-full md:w-[31.429vw] h-[63.09vw] md:h-[42.857vw]" src="/assets/images/careers-two.svg" alt="">
-            </div>
-            <div class="hidden md:block col-span-1">
-               <p class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[1.2]">Azersilah merges advanced research with artisan-level craft to create defense solutions that look forward—so humanity can move forward. Every detail is purposeful, every line refined, every system built to protect what matters most</p>
-            </div>
+          <div class="col-span-1 self-end">
+            <img
+              class="w-full md:w-[31.429vw] h-[63.09vw] md:h-[31.429vw] object-cover md:object-contain"
+              src="/assets/images/careers-one.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-span-1">
+            <img
+              class="w-full md:w-[31.429vw] h-[63.09vw] md:h-[42.857vw]"
+              src="/assets/images/careers-two.svg"
+              alt=""
+            />
+          </div>
+          <div class="hidden md:block col-span-1">
+            <p
+              class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[1.2]"
+            >
+              Azersilah merges advanced research with artisan-level craft to
+              create defense solutions that look forward—so humanity can move
+              forward. Every detail is purposeful, every line refined, every
+              system built to protect what matters most
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Video -->
-    <section class="grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-6 md:pb-12">
+      <!-- Video -->
+      <section
+        class="relative z-20 bg-white grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[16vw] md:pt-[8.57vw] pb-6 md:pb-12"
+      >
         <div class="col-span-1 pb-5 md:pb-0">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]">
-                [  VIDEO  ]
-            </span>
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#081423] opacity-50 tracking-[-0.04em]"
+          >
+            [ VIDEO ]
+          </span>
         </div>
         <div class="col-span-1 md:col-span-2 w-full md:w-3/4">
-            <h1 class="font-helvetica font-medium text-[#081423] text-[8.533vw] md:text-[3.5em] leading-none uppercase">Inside <br> the Lab, Live</h1>
+          <h1
+            class="font-helvetica font-medium text-[#081423] text-[8.533vw] md:text-[3.5em] leading-none uppercase"
+          >
+            Inside <br />
+            the Lab, Live
+          </h1>
         </div>
-    </section>
+      </section>
 
-    <section class="px-3 md:px-[1.71vw] pb-[16vw] md:pb-[8.57vw]">
+      <section
+        class="relative z-20 bg-white px-3 md:px-[1.71vw] pb-[16vw] md:pb-[8.57vw]"
+      >
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
-            <div class="col-span-1 relative aspect-square overflow-hidden">
-                <img src="/assets/images/video-one.svg" alt="video preview" class="w-full h-full object-cover" />
+          <div class="col-span-1 relative aspect-square overflow-hidden">
+            <img
+              src="/assets/images/video-one.svg"
+              alt="video preview"
+              class="w-full h-full object-cover"
+            />
 
-                <img src="/assets/images/pause.svg"
-                    alt="Play"
-                    class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+            <img
+              src="/assets/images/pause.svg"
+              alt="Play"
+              class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            />
 
-                <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
-                    <h3 class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]">INSIDE THE NEXT LAB</h3>
-                    <span class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50">02:23</span>
-                </div>
+            <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
+              <h3
+                class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]"
+              >
+                INSIDE THE NEXT LAB
+              </h3>
+              <span
+                class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50"
+                >02:23</span
+              >
             </div>
+          </div>
 
-            <div class="col-span-1 relative aspect-square overflow-hidden">
-                <img src="/assets/images/video-two.svg" alt="video preview" class="w-full h-full object-cover" />
+          <div class="col-span-1 relative aspect-square overflow-hidden">
+            <img
+              src="/assets/images/video-two.svg"
+              alt="video preview"
+              class="w-full h-full object-cover"
+            />
 
-                <img src="/assets/images/pause.svg"
-                    alt="Play"
-                    class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+            <img
+              src="/assets/images/pause.svg"
+              alt="Play"
+              class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            />
 
-                <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
-                    <h3 class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]">INSIDE THE NEXT LAB</h3>
-                    <span class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50">02:23</span>
-                </div>
+            <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
+              <h3
+                class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]"
+              >
+                INSIDE THE NEXT LAB
+              </h3>
+              <span
+                class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50"
+                >02:23</span
+              >
             </div>
+          </div>
 
-            <div class="col-span-1 relative aspect-square overflow-hidden">
-                <img src="/assets/images/video-three.svg" alt="video preview" class="w-full h-full object-cover" />
+          <div class="col-span-1 relative aspect-square overflow-hidden">
+            <img
+              src="/assets/images/video-three.svg"
+              alt="video preview"
+              class="w-full h-full object-cover"
+            />
 
-                <img src="/assets/images/pause.svg"
-                    alt="Play"
-                    class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+            <img
+              src="/assets/images/pause.svg"
+              alt="Play"
+              class="absolute top-1/2 left-1/2 w-12 h-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            />
 
-                <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
-                    <h3 class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]">INSIDE THE NEXT LAB</h3>
-                    <span class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50">02:23</span>
-                </div>
+            <div class="absolute bottom-0 left-0 w-full px-5 pb-5 text-white">
+              <h3
+                class="font-helvetica text-[4.27vw] md:text-[1.429vw] font-medium leading-[-0.05em]"
+              >
+                INSIDE THE NEXT LAB
+              </h3>
+              <span
+                class="font-helvetica text-[3.2vw] md:text-[1.429vw] font-medium leading-[-0.05em] opacity-50"
+                >02:23</span
+              >
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Bootcamp -->
-    <section class="relative h-screen">
+      <!-- Bootcamp -->
+      <section class="relative h-screen">
         <div class="absolute inset-0 bg-[#10121BB2] z-10"></div>
         <div class="absolute inset-0">
-            <img src="/assets/images/bootcamp.png" alt="" class="w-full h-full object-cover">
+          <img
+            src="/assets/images/bootcamp.png"
+            alt=""
+            class="w-full h-full object-cover"
+          />
         </div>
-        <div class="absolute inset-0 z-10 flex flex-col justify-center items-center text-center gap-6 px-6">
-            <div class="w-full md:w-[43.143vw] h-[80.8vw] md:h-[43.143vw] flex flex-col justify-between">
-                <div class="flex justify-between w-full">
-                    <img src="/assets/images/bootcamp-icon.svg" alt="">
-                    <img class="rotate-90" src="/assets/images/bootcamp-icon.svg" alt="">
-                </div>
-                <div class="flex flex-col gap-6">
-                    <span class="font-helvetica font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]">[  BOOTCAMP  ]</span>
-                    <h1 class="font-helvetica font-medium text-[8.53vw] md:text-[4vw] text-[#ffffff] leading-none uppercase tracking-[-0.04em]">Where Visionaries <br> Are Made</h1>
-                    <p class="text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw]">Refine your skills and become the innovator <br> the defense sector needs</p>
-                </div>
-                <div class="flex justify-between w-full">
-                    <img class="-rotate-90" src="/assets/images/bootcamp-icon.svg" alt="">
-                    <img class="rotate-180" src="/assets/images/bootcamp-icon.svg" alt="">
-                </div>
+        <div
+          class="absolute inset-0 z-10 flex flex-col justify-center items-center text-center gap-6 px-6"
+        >
+          <div
+            class="w-full md:w-[43.143vw] h-[80.8vw] md:h-[43.143vw] flex flex-col justify-between"
+          >
+            <div class="flex justify-between w-full">
+              <img src="/assets/images/bootcamp-icon.svg" alt="" />
+              <img
+                class="rotate-90"
+                src="/assets/images/bootcamp-icon.svg"
+                alt=""
+              />
             </div>
+            <div class="flex flex-col gap-6">
+              <span
+                class="font-helvetica font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]"
+                >[ BOOTCAMP ]</span
+              >
+              <h1
+                class="font-helvetica font-medium text-[8.53vw] md:text-[4vw] text-[#ffffff] leading-none uppercase tracking-[-0.04em]"
+              >
+                Where Visionaries <br />
+                Are Made
+              </h1>
+              <p class="text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw]">
+                Refine your skills and become the innovator <br />
+                the defense sector needs
+              </p>
+            </div>
+            <div class="flex justify-between w-full">
+              <img
+                class="-rotate-90"
+                src="/assets/images/bootcamp-icon.svg"
+                alt=""
+              />
+              <img
+                class="rotate-180"
+                src="/assets/images/bootcamp-icon.svg"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- SUPPLY -->
-     <section class="grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[70px] md:pt-[8.57vw] pb-6 md:pb-12 bg-[#081423]">
+      <!-- SUPPLY -->
+      <section
+        class="relative z-20 grid grid-cols-1 md:grid-cols-3 px-3 md:px-[1.71vw] pt-[70px] md:pt-[8.57vw] pb-6 md:pb-12 bg-[#081423]"
+      >
         <div class="col-span-1 pb-5 md:pb-0">
-            <span class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]">
-                [  SUPPLY  ]
-            </span>
+          <span
+            class="font-helvetica font-normal md:font-medium text-[3.2vw] md:text-[1.143vw] text-[#ffffff] opacity-50 tracking-[-0.04em]"
+          >
+            [ SUPPLY ]
+          </span>
         </div>
         <div class="col-span-1 md:col-span-2 w-full md:w-3/4">
-            <h1 class="font-helvetica font-medium text-[#ffffff] text-[8.533vw] md:text-[3.5em] leading-none pb-4 md:pb-6 uppercase">Precision Partners <br> Powerful Results</h1>
-            <div class="block md:hidden col-span-1">
-               <p class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[1.2]">We partner with suppliers who share our unwavering commitment to innovation, quality, and performance</p>
-            </div>
+          <h1
+            class="font-helvetica font-medium text-[#ffffff] text-[8.533vw] md:text-[3.5em] leading-none pb-4 md:pb-6 uppercase"
+          >
+            Precision Partners <br />
+            Powerful Results
+          </h1>
+          <div class="block md:hidden col-span-1">
+            <p
+              class="font-helvetica text-[#E5E3E3] text-[4.27vw] md:text-[1.429vw] leading-[1.2]"
+            >
+              We partner with suppliers who share our unwavering commitment to
+              innovation, quality, and performance
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="bg-[#081423] pb-[16vw] md:pb-[8.57vw] px-4">
+      <section class="relative z-20 bg-[#081423] pb-[16vw] md:pb-[8.57vw] px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 border border-[#FFFFFF40]">
-            <div class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6 border-b md:border-b-[0] md:border-r border-[#FFFFFF40]">
-                <div class="">
-                    <img class="w-8 h-8 md:w-10 md:h-10" src="/assets/images/supply-icon-one.svg" alt="">
-                    <h1 class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">innovation</h1>
-                </div>
-                <p class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70">Partnering for groundbreaking advancements that lead to the next-generation defense technology</p>
+          <div
+            class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6 border-b md:border-b-[0] md:border-r border-[#FFFFFF40]"
+          >
+            <div class="">
+              <img
+                class="w-8 h-8 md:w-10 md:h-10"
+                src="/assets/images/supply-icon-one.svg"
+                alt=""
+              />
+              <h1
+                class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase"
+              >
+                innovation
+              </h1>
             </div>
-            <div class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6 border-b md:border-b-[0] md:border-r border-[#FFFFFF40]">
-                <div class="">
-                    <img class="w-8 h-8 md:w-10 md:h-10" src="/assets/images/supply-icon-two.svg" alt="">
-                    <h1 class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">precision</h1>
-                </div>
-                <p class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70">Working with suppliers who uphold the highest standards of precision in every component</p>
+            <p
+              class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70"
+            >
+              Partnering for groundbreaking advancements that lead to the
+              next-generation defense technology
+            </p>
+          </div>
+          <div
+            class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6 border-b md:border-b-[0] md:border-r border-[#FFFFFF40]"
+          >
+            <div class="">
+              <img
+                class="w-8 h-8 md:w-10 md:h-10"
+                src="/assets/images/supply-icon-two.svg"
+                alt=""
+              />
+              <h1
+                class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase"
+              >
+                precision
+              </h1>
             </div>
-            <div class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6">
-                <div class="">
-                    <img class="w-8 h-8 md:w-10 md:h-10" src="/assets/images/supply-icon-three.svg" alt="">
-                    <h1 class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase">QUALITY</h1>
-                </div>
-                <p class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70">Delivering products that are engineered for performance, durability, and mission success</p>
+            <p
+              class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70"
+            >
+              Working with suppliers who uphold the highest standards of
+              precision in every component
+            </p>
+          </div>
+          <div
+            class="col-span-1 h-[93.6vw] md:h-[33.286vw] flex flex-col justify-between p-6"
+          >
+            <div class="">
+              <img
+                class="w-8 h-8 md:w-10 md:h-10"
+                src="/assets/images/supply-icon-three.svg"
+                alt=""
+              />
+              <h1
+                class="pt-4 font-helvetica font-medium text-[6.4vw] md:text-[2.571vw] text-[#ffffff] tracking-[-0.04em] uppercase"
+              >
+                QUALITY
+              </h1>
             </div>
+            <p
+              class="font-helvetica text-[#ffffff] tracking-[-0.03em] text-[4.27vw] md:text-[1.429vw] opacity-70"
+            >
+              Delivering products that are engineered for performance,
+              durability, and mission success
+            </p>
+          </div>
         </div>
-    </section>
-
+      </section>
     </main>
 
-
-      <footer class="bg-[#030E1C] px-3 md:px-[1.71vw] font-helvetica text-[#ffffff]">
-        <div class="grid grid-cols-1 md:grid-cols-2 pt-[16vw] pb-8 md:py-[5.14vw]">
-            
-            <!-- Logo and description -->
-            <div class="flex flex-col gap-6 justify-between items-center md:items-start text-center md:text-left">
-                <img class="w-[58.93vw] md:w-[15.786vw]" src="/assets/images/logo.svg" alt="">
-                <p class="text-[3.73vw] md:text-[1vw] opacity-50 uppercase tracking-[-0.02em] leading-[130%]">
-                    ALL CRAFTED AND BUILT IN AZERBAIJAN.<br />
-                    SO TOMORROW CAN MOVE FORWARD, SAFELY.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8 md:gap-[9.714vw]">
-            <!-- Company -->
-            <div>
-            <h3 class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em]">COMPANY</h3>
-            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">CAREERS</a></li>
-                <li><a href="#">CONTACTS</a></li>
-            </ul>
-            </div>
-
-            <!-- Terms & Policies -->
-            <div>
-            <h3 class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em] whitespace-nowrap">TERMS & POLICIES</h3>
-            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
-                <li><a href="#">PRIVACY POLICY</a></li>
-                <li><a href="#">TERMS OF USE</a></li>
-            </ul>
-            </div>
-
-            <!-- Social Media -->
-            <div>
-            <h3 class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em]">SOCIAL MEDIA</h3>
-            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
-                <li><a href="#">FACEBOOK</a></li>
-                <li><a href="#">INSTAGRAM</a></li>
-                <li><a href="#">YOUTUBE</a></li>
-            </ul>
-            </div></div>
-            
+    <footer
+      class="relative z-20 bg-[#030E1C] px-3 md:px-[1.71vw] font-helvetica text-[#ffffff]"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 pt-[16vw] pb-8 md:py-[5.14vw]"
+      >
+        <!-- Logo and description -->
+        <div
+          class="flex flex-col gap-6 justify-between items-center md:items-start text-center md:text-left"
+        >
+          <img
+            class="w-[58.93vw] md:w-[15.786vw]"
+            src="/assets/images/logo.svg"
+            alt=""
+          />
+          <p
+            class="text-[3.73vw] md:text-[1vw] opacity-50 uppercase tracking-[-0.02em] leading-[130%]"
+          >
+            ALL CRAFTED AND BUILT IN AZERBAIJAN.<br />
+            SO TOMORROW CAN MOVE FORWARD, SAFELY.
+          </p>
         </div>
 
-        <!-- Divider -->
-        <div class="border-t border-[#FFFFFF26]"></div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8 md:gap-[9.714vw]"
+        >
+          <!-- Company -->
+          <div>
+            <h3
+              class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em]"
+            >
+              COMPANY
+            </h3>
+            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">CAREERS</a></li>
+              <li><a href="#">CONTACTS</a></li>
+            </ul>
+          </div>
 
-        <!-- Bottom row -->
-        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[4.27vw] md:text-[1vw] gap-2 py-8 md:pt-9 md:pb-[38px]">
-            <p class="font-medium opacity-50 tracking-[-0.03em]">© AZERSILAH 2025. ALL RIGHTS RESERVED</p>
-            <p class="font-medium tracking-[-0.03em]">
-                <span class="opacity-50">WEBSITE CREATED BY </span>
-                <span class="font-medium">SAFAROFF AGENCY</span>
-            </p>
+          <!-- Terms & Policies -->
+          <div>
+            <h3
+              class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em] whitespace-nowrap"
+            >
+              TERMS & POLICIES
+            </h3>
+            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
+              <li><a href="#">PRIVACY POLICY</a></li>
+              <li><a href="#">TERMS OF USE</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3
+              class="font-medium opacity-50 mb-6 text-[4.27vw] md:text-[1.143vw] tracking-[-0.03em]"
+            >
+              SOCIAL MEDIA
+            </h3>
+            <ul class="space-y-4 text-[4.27vw] md:text-[1.143vw]">
+              <li><a href="#">FACEBOOK</a></li>
+              <li><a href="#">INSTAGRAM</a></li>
+              <li><a href="#">YOUTUBE</a></li>
+            </ul>
+          </div>
         </div>
-      </footer>
+      </div>
 
+      <!-- Divider -->
+      <div class="border-t border-[#FFFFFF26]"></div>
+
+      <!-- Bottom row -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[4.27vw] md:text-[1vw] gap-2 py-8 md:pt-9 md:pb-[38px]"
+      >
+        <p class="font-medium opacity-50 tracking-[-0.03em]">
+          © AZERSILAH 2025. ALL RIGHTS RESERVED
+        </p>
+        <p class="font-medium tracking-[-0.03em]">
+          <span class="opacity-50">WEBSITE CREATED BY </span>
+          <span class="font-medium">SAFAROFF AGENCY</span>
+        </p>
+      </div>
+    </footer>
 
     <!-- JavaScript -->
-
     <script src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
