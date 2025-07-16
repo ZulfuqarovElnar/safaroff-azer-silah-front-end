@@ -56,14 +56,17 @@ const menu = document.getElementById("mobile-menu");
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const counts = document.querySelectorAll('.count');
-    let animated = false;
+  const counts = document.querySelectorAll('.count');
+  let animated = false;
+  const delay = 200;
 
-    function animateCounts() {
+  function animateCounts() {
+    setTimeout(() => {
       counts.forEach(el => {
         const target = parseInt(el.getAttribute('data-target'), 10);
         let current = 0;
-        const duration = 2000;
+
+        const duration = 700;
         const stepTime = Math.floor(duration / target);
 
         const timer = setInterval(() => {
@@ -75,23 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }, stepTime);
       });
-    }
+    }, delay);
+  }
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !animated) {
-          animateCounts();
-          animated = true;
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.3 });
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animateCounts();
+        animated = true;
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
 
-    const statisticsSection = document.getElementById('statistics');
-    if (statisticsSection) {
-      observer.observe(statisticsSection);
-    }
-  });
+  const statisticsSection = document.getElementById('statistics');
+  if (statisticsSection) {
+    observer.observe(statisticsSection);
+  }
+});
+
+
   const header = document.getElementById('main-header');
   const threshold = window.innerHeight;
 
