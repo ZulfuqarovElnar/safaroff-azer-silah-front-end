@@ -34,7 +34,7 @@ const menu = document.getElementById("mobile-menu");
       direction: 'vertical',
       loop: true,
       autoplay: {
-        delay: 1000,
+        delay: 600,
         disableOnInteraction: false,
       },
       speed: 600,
