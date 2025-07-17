@@ -111,3 +111,38 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.pointerEvents = 'auto';
     }
   });
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll("#our-swiper .swiper-slide");
+    const total = slides.length;
+    let current = 0;
+
+    let maxZ = Array.from(slides).reduce((m, s) =>
+      Math.max(m, parseInt(getComputedStyle(s).zIndex) || 0), 0);
+
+    setInterval(() => {
+      const next = (current + 1) % total;
+
+      slides[next].style.transition = "none";
+      slides[next].style.transform = "translateY(100%)";
+      slides[next].style.opacity = "0";
+      void slides[next].offsetWidth;
+
+      slides[next].style.transition = "transform 0.9s ease-out";
+      slides[next].style.transform  = "translateY(0)";
+      slides[next].style.opacity    = "1";
+      slides[next].style.zIndex     = ++maxZ;
+
+      current = next;
+    }, 900);
+  });
+
+  const section = document.getElementById("bootcamp-section");
+  const icons = document.getElementById("bootcamp-icons");
+
+  icons.addEventListener("mouseenter", () => {
+    section.classList.add("scale-110");
+  });
+
+  icons.addEventListener("mouseleave", () => {
+    section.classList.remove("scale-110");
+  });

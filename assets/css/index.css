@@ -29,3 +29,16 @@
   animation: bounceSlide 0.7s ease-out both;
   -webkit-animation: bounceSlide 0.7s ease-out both;
 }
+ #our-swiper .swiper-slide {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.9s ease-in-out;
+    -webkit-transition: transform 0.9s ease-in-out;
+    -moz-transition: transform 0.9s ease-in-out;
+    -ms-transition: transform 0.9s ease-in-out;
+    -o-transition: transform 0.9s ease-in-out;
+}
+  #our-swiper .swiper-slide:nth-child(1) {
+    transform: translateY(0);
+    opacity: 1;
+  }
