@@ -17,6 +17,12 @@ tailwind.config = {
   }
 }
 
+// const cursor = document.getElementById('cursor');
+//   document.addEventListener('mousemove', (e) => {
+//     cursor.style.left = e.clientX + 'px';
+//     cursor.style.top = e.clientY + 'px';
+// });
+
 const menu = document.getElementById("mobile-menu");
 
   function openMenu() {
@@ -147,11 +153,3 @@ document.addEventListener('DOMContentLoaded', () => {
     section.classList.remove("scale-110");
   });
 
-  window.addEventListener('wheel', function (e) {
-  e.preventDefault(); 
-  const scrollSpeed = 0.5;
-  window.scrollBy({
-    top: e.deltaY * scrollSpeed,
-    behavior: 'auto'
-  });
-}, { passive: false });

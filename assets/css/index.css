@@ -4,8 +4,29 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+/* body{
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  background: url('/assets/images/plus-icon.svg') no-repeat center/contain;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+} */
+
 .mix-blend-difference {
     mix-blend-mode: difference;
+}
+.mix-blend-none {
+    mix-blend-mode: normal;
 }
 
 @keyframes blink {
