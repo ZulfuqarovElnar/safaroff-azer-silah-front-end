@@ -146,3 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
   icons.addEventListener("mouseleave", () => {
     section.classList.remove("scale-110");
   });
+
+  window.addEventListener('wheel', function (e) {
+  e.preventDefault(); 
+  const scrollSpeed = 0.5;
+  window.scrollBy({
+    top: e.deltaY * scrollSpeed,
+    behavior: 'auto'
+  });
+}, { passive: false });
