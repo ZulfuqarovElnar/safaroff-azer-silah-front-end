@@ -41,10 +41,10 @@ const menu = document.getElementById("mobile-menu");
       direction: 'vertical',
       loop: true,
       autoplay: {
-        delay: 600,
+        delay: 1950,
         disableOnInteraction: false,
       },
-      speed: 600,
+      speed: 200,
       slidesPerView: 1,
       allowTouchMove: false,
     });
