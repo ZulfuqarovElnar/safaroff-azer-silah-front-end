@@ -23,6 +23,7 @@ tailwind.config = {
 //     cursor.style.top = e.clientY + 'px';
 // });
 
+// Header menu
 const menu = document.getElementById("mobile-menu");
 
   function openMenu() {
@@ -61,49 +62,55 @@ const menu = document.getElementById("mobile-menu");
   });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const counts = document.querySelectorAll('.count');
-  let animated = false;
-  const delay = 200;
+   // Statistics
+  document.addEventListener('DOMContentLoaded', () => {
+    const counts = document.querySelectorAll('.count');
+    let animated = false;
+    const duration = 700;
+    const delay = 200;
 
-  function animateCounts() {
-    setTimeout(() => {
+    function animateCounts() {
       counts.forEach(el => {
         const target = parseInt(el.getAttribute('data-target'), 10);
-        let current = 0;
+        const startTime = performance.now();
 
-        const duration = 700;
-        const stepTime = Math.floor(duration / target);
+        function update(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1); 
+          const current = Math.floor(progress * target);
 
-        const timer = setInterval(() => {
-          current++;
           el.textContent = current + '+';
 
-          if (current >= target) {
-            clearInterval(timer);
+          if (progress < 1) {
+            requestAnimationFrame(update);
           }
-        }, stepTime);
+        }
+
+        requestAnimationFrame(update);
       });
-    }, delay);
-  }
+    }
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animateCounts();
-        animated = true;
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          setTimeout(() => {
+            animateCounts();
+          }, delay);
+          animated = true;
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
 
-  const statisticsSection = document.getElementById('statistics');
-  if (statisticsSection) {
-    observer.observe(statisticsSection);
-  }
-});
+    const statisticsSection = document.getElementById('statistics');
+    if (statisticsSection) {
+      observer.observe(statisticsSection);
+    }
+  });
 
 
+
+  // Hero 
   const header = document.getElementById('main-header');
   const threshold = window.innerHeight;
 
@@ -117,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.pointerEvents = 'auto';
     }
   });
+
+  // Our Slide
   document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll("#our-swiper .swiper-slide");
     const total = slides.length;
@@ -142,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 900);
   });
 
+  // Bootcamp
   const section = document.getElementById("bootcamp-section");
   const icons = document.getElementById("bootcamp-icons");
 
