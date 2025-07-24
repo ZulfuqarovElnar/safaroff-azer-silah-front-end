@@ -23,7 +23,11 @@ html {
 } */
 
 .mix-blend-difference {
-    mix-blend-mode: difference;
+     mix-blend-mode: difference;
+  -webkit-mix-blend-mode: difference;
+  isolation: isolate;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
 }
 .mix-blend-none {
     mix-blend-mode: normal;
