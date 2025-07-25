@@ -152,14 +152,17 @@ const menu = document.getElementById("mobile-menu");
   });
 
   // Bootcamp
+  document.addEventListener("DOMContentLoaded", () => {
   const section = document.getElementById("bootcamp-section");
   const icons = document.getElementById("bootcamp-icons");
 
-  icons.addEventListener("mouseenter", () => {
-    section.classList.add("scale-110");
-  });
+  if (section && icons) {
+    icons.addEventListener("mouseenter", () => {
+      section.classList.add("scale-110");
+    });
 
-  icons.addEventListener("mouseleave", () => {
-    section.classList.remove("scale-110");
-  });
-
+    icons.addEventListener("mouseleave", () => {
+      section.classList.remove("scale-110");
+    });
+  }
+});
