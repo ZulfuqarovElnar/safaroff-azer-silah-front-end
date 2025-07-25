@@ -1,22 +1,4 @@
 
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        helvetica: ['"Helvetica Neue"', 'sans-serif'],
-      },
-      screens: {
-        'xs': '480px',
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1440px",
-      },
-    }
-  }
-}
-
 // const cursor = document.getElementById('cursor');
 //   document.addEventListener('mousemove', (e) => {
 //     cursor.style.left = e.clientX + 'px';
@@ -143,9 +125,9 @@ const menu = document.getElementById("mobile-menu");
       void slides[next].offsetWidth;
 
       slides[next].style.transition = "transform 0.9s ease-out";
-      slides[next].style.transform  = "translateY(0)";
-      slides[next].style.opacity    = "1";
-      slides[next].style.zIndex     = ++maxZ;
+      slides[next].style.transform = "translateY(0)";
+      slides[next].style.opacity = "1";
+      slides[next].style.zIndex = ++maxZ;
 
       current = next;
     }, 900);
