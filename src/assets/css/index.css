@@ -64,3 +64,123 @@ html {
     transform: translateY(0);
     opacity: 1;
   }
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  color: #000;  
+  font-weight: 500;
+}  
+
+h1{
+  font-size: 5.71vw;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+}
+
+h2{
+  font-size: 4vw;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+h3{
+  font-size: 2.57vw;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+}
+
+h4{
+  font-size: 2vw;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+}
+
+h5{
+  font-size: 1.43vw;
+  line-height: 130%;
+  letter-spacing: -0.05em;
+}
+
+p{
+  font-size: 1.29vw;
+  line-height: 1.71vw;
+  font-family: Helvetica, sans-serif;
+  color: #000;
+}
+
+.subheadline{
+  font-size: 1.14vw;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #000;
+}
+
+.number{
+  font-family: Helvetica, sans-serif;
+  font-size: 6.29vw;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #000;
+}
+
+.headline-desktop{
+  font-size: 8vw;
+  line-height: 7.43vw;
+  font-family: Helvetica, sans-serif;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 11.73vw;
+  }
+  h2{
+    font-size: 8.53vw;
+  }
+  h3{
+    font-size: 6.4vw;
+  }
+  h4{
+    font-size: 5.33vw;
+  }
+  h5{
+    font-size: 4.27vw;
+  }
+  p{
+    font-size: 4.27vw;
+    line-height: 130%;
+  }
+  .subheadline{
+    font-size: 3.73vw;
+  }
+  .number{
+    font-size: 14.93vw;
+  }
+  .headline-desktop{
+    font-size: 14.93vw;
+    line-height: 27.73vw;
+  }
+  .subhead {
+    font-family: Helvetica, sans-serif;
+    font-size: 3.2vw;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .med {
+    font-family: Helvetica, sans-serif;
+    font-size: 3.2vw;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    line-height: 130%;
+    color: #000;
+    text-transform: uppercase;
+  }
+}
